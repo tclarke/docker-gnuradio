@@ -1,4 +1,6 @@
-FROM navikey/raspbian-buster
+ARG ARCH=
+#FROM navikey/raspbian-buster
+FROM ${ARCH}debian:buster-slim
 
 RUN apt update --allow-releaseinfo-change && \
     apt upgrade -qy && \
